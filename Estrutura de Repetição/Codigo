@@ -1,0 +1,67 @@
+nome = input("Nome: ")
+
+
+
+continuar = "s"
+
+
+
+while continuar.lower() == "s":
+
+  materia = input("\nMatéria: ")
+
+
+
+  soma_notas = 0
+
+  for n in range(1, 5):
+
+    while True:
+
+      nota = float(input(f'Digite a nota {n}: '))
+
+      if 0 <= nota <=10:
+
+        break
+
+      else:
+
+        print("Nota inválida! Digite um número de 0 a 10")
+
+
+
+    soma_notas += nota
+
+
+
+  frequencia = int(input("Frequência: "))
+
+
+
+  media = soma_notas / 4
+
+
+
+  print(f"Olá {nome}, para passar nas disciplinas o mínimo esperado e você ter uma média acima de 6 e uma frequência acima de 50")
+
+  print(f"Sua média em {materia} é: {media}")
+
+  print(f"Sua frequência em {materia} é: {frequencia}")
+
+
+
+  if media >= 6 and frequencia >= 50:
+
+    print('Situação: Aprovado')
+
+  else:
+
+    print('Situação: Reprovado')
+
+   
+
+  continuar = input("Deseja cadastrar outra disciplina?(s/n): ")
+
+   
+
+print(f"\nAté logo, {nome}!")
